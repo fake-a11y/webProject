@@ -267,6 +267,22 @@ a:hover {
     color: var(--linkHover);
 }
 
+.skills label {
+    display: list-item;
+    list-style: none;
+    padding-top: 0.5em;
+    clear: both;
+}
+
+.skills progress {
+    display: inline-block;
+    padding: 1em;
+    width: 16em;
+    color: black;
+}
+
+
+
 /*END: Profile/skills section of about.html page*/
 
 .form fieldset {
