@@ -30,17 +30,20 @@
 
         <div class="body">
           <h2>Give Me Feedback on this Website and/or Projects Featured</h2>
-            <form method="post" action="" class="form">
+            <form method="post" action="" class="form" onsubmit="event.preventDefault(); validateForm();">
                 <fieldset>
                     <legend>Report Issues/Bugs</legend>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Security Issue</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Server Bug</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Program Bug (Logic/Semantic)</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">UI/UX issue</label>
+                    <input type="checkbox" name="c1" value="c1">
+                    <label for="c1">Security Issue</label>
+
+                    <input type="checkbox" name="c1" value="c1">
+                    <label for="c1">Server Bug</label>
+
+                    <input type="checkbox" name="c1" value="c1">
+                    <label for="c1">Program Bug (Logic/Semantic)</label>
+
+                    <input type="checkbox" name="c1" value="c1">
+                    <label for="c1">UI/UX issue</label>
                 </fieldset>
 
                 <label for="details"></label>
