@@ -1,0 +1,557 @@
+/*
+Author: Matthew Lancaster
+File name: styles.css
+Date Last Updated: 8/4/2022
+*/
+
+:root {
+    --primary: #0b0947;
+    --secondary: #362c66;
+    --tertiary: #f8d31a;
+    --link: #758BFD;
+    --linkHover: #AEB8FE;
+}
+
+body {
+    background-color: var(--primary);
+    background-image: url("../img/background.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+    color: var(--tertiary);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    /*Makes divs function differently by default*/
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/*Start: Custom scrollbar for body of page*/
+::-webkit-scrollbar {
+    background-color: var(--primary);
+    width: 26px;
+    backdrop-filter: blur(7px);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary);
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0);
+    border: solid 4px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(7px);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 10px var(--link);
+    border: solid 6px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(7px);
+}
+/*End: Custom scrollbar for body of page*/
+
+/*Make filter fit 100% of background; will change with tinker.html page event listeners*/
+#filter {
+    height: calc(100% - 50px);
+    width: 100%;
+    overflow-y:  auto;
+    background-color: rgba(11, 9, 71, 0.7);
+}
+
+.background {
+    background-color: rgba(59, 59, 59, 0.1);
+    padding: 1em;
+    padding-top: 0.1em;
+    border-radius: 1em;
+    min-width: 4em;
+    max-width: 65em;
+    margin-right: auto;
+    margin-left: auto;
+    backdrop-filter: blur(7px);
+}
+
+
+.header {
+    text-shadow: 0px 0px 7px var(--tertiary);
+    background-color: var(--primary);
+    min-width: 4em;
+    max-width: 75em;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 1em;
+    text-align: center;
+    padding: 0.1em 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.nav {
+    min-width: 6em;
+    max-width: 75em;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--primary);
+    border-radius: 0.3em;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+nav li a {
+    display: block;
+    color: var(--link);
+    background-color: var(--secondary);
+    text-decoration: none;
+    height: 100%;
+    border-radius: 0.3em;
+    box-shadow: -2.5px 2.5px 5px rgba(14, 0, 0, 0.5);
+    padding: 0.1em;
+}
+
+/*Vertically aligns lists that only take up one line to appear more centered: START*/
+nav li:nth-child(1) {
+    line-height: 2.3em;
+}
+
+nav li:nth-child(3) {
+    line-height: 2.3em;
+}
+
+nav li:nth-child(4) {
+    line-height: 2.3em;
+}
+
+nav li:nth-child(5) {
+    line-height: 2.3em;
+}
+/*Vertically aligns lists that only take up one line to appear more centered: END*/
+
+nav li {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.7em;
+    padding: 0.1em;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+    color: var(--linkHover);
+    background-color:var(--secondary);
+    border-radius: 0.3em;
+    box-shadow: -6px 6px 5px rgba(14, 0, 0, 0.7);
+}
+
+.body {
+    min-width: 2em;
+    max-width: 58em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1em;
+    background-color: var(--primary);
+    padding-top: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.5em;
+    margin-top: 1em;
+    border-radius: 0.3em;
+}
+
+.body h2 {
+    padding: 0.3em;
+    background-color: var(--secondary);
+    border-bottom: 0.15em solid var(--tertiary);
+    min-width: 4em;
+    max-width: fit-content;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.footer {
+    padding: 0.1em 0.5em;
+    min-width: 4em;
+    max-width: 75em;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--primary);
+    border-radius: 0.3em;
+}
+
+.footer a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--linkHover);
+}
+
+/*START: Profile/skills section of about.html page*/
+.profile {
+    max-width: 8em;
+    height: 8em;
+    padding: 0;
+    border: solid 0.4em var(--secondary);
+    border-radius: 10em;
+    animation: animateProfile 2s forwards;
+    animation-delay: 1.5s;
+}
+
+/*START: Animation keyframes for about.html*/
+@keyframes animateProfile{
+    0%{
+        max-width: 8em;
+        border-radius: 5em;
+    }
+    100%{
+        max-width: 60em;
+        height: 20em;
+        border-radius: 2em;
+    }
+  }
+
+  @keyframes animateImage{
+    0%{
+        width: 8em;
+    }
+    100%{
+        width: 5em;
+        margin: 1.5em 1em 0em 0.5em;
+    }
+  }
+
+  @keyframes animateContent{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+  }
+
+/*END: Animation keyframes for about.html*/
+
+.profile img {
+    width: 8em;
+    border-radius: 10em;
+    animation: animateImage 0.5s forwards;
+    animation-delay: 2s;
+    float: left;
+}
+
+.profile p {
+    opacity: 0;
+    margin: 1.5em 3.5em 0em 2.5em;
+    padding: 0.5em;
+    animation: animateContent 1.5s forwards;
+    animation-delay: 2.5s;
+}
+
+.skills {
+    border: 0.4em var(--secondary) solid;
+    border-radius: 2em;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.skills a {
+    color: var(--link);
+}
+
+.skills a:hover {
+    color: var(--linkHover);
+}
+
+.skills label {
+    display: list-item;
+    list-style: none;
+    padding-top: 0.5em;
+    clear: both;
+    margin-top: 1em;
+    border-top: 0.3em solid var(--tertiary);
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+}
+
+.skills progress {
+    display: inline-block;
+    padding: 1em 1em 0 1em;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 90%;
+    max-width: 100%;
+    height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.skills span {
+    border-left: solid 0.17em var(--tertiary);
+    padding-left: 0.6em;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+}
+
+
+/*END: Profile/skills section of about.html page*/
+
+.form fieldset {
+    border-color: var(--tertiary);
+    border-radius: 20px;
+    padding: 2em 2em 2em 0.5em;
+}
+
+.form legend {
+    font-size: larger;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    border: 0.2em solid var(--tertiary);
+    border-radius: 1em;
+}
+
+.form input {
+    padding: 0;
+    padding: 1em;
+    float: left;
+    background-color: var(--secondary);
+    border-color: var(--tertiary);
+    color: var(--tertiary);
+    border-radius: 0.5em;
+    margin-right: 1em;
+    margin-left: 0;
+}
+
+.form input:last-child {
+    float: none;
+    margin-bottom: 1em;
+    margin-right: 0;
+}
+.form input:last-child:hover {
+    cursor: pointer;
+    background-color: var(--link);
+}
+
+/*START: Custom Checkbox styles*/
+.form input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--secondary);
+    border: 0.1em solid var(--tertiary);
+    padding: 0.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.form input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.form input[type="checkbox"]:checked {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+    background-color: var(--link);
+}
+
+.form input[type="checkbox"]:checked:active {
+	background-color: var(--linkHover);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.form input[type="checkbox"]:checked:after {
+    content: '\2714';
+    position: absolute;
+	font-size: 1.5em;
+    text-align: center;
+    left: 0.15em;
+    bottom: 0.1px;
+}
+/*END: Custom Checkbox styles*/
+
+.form label {
+    display: list-item;
+    float: none;
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 1.5em;
+    font-size: larger;
+    color: var(--tertiary);
+}
+
+/*START: Custom textarea/scrollbar styles*/
+.form textarea {
+    width: 99%;
+    height: 16em;
+    font-size: 1.1em;
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    border-radius: 0.3em;
+    border: 0.15em solid var(--tertiary);
+    resize: none;
+}
+
+.form textarea::-webkit-scrollbar {
+    background-color: var(--primary);
+    width: 16px;
+}
+
+.form textarea::-webkit-scrollbar-track {
+    background: var(--primary);
+    box-shadow: inset 0 0 10px 10px var(--secondary);
+    border: solid 4px var(--secondary);
+}
+
+.form textarea::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 10px var(--link);
+    border: solid 3px var(--secondary);
+}
+
+.form textarea:active {
+    border-color: var(--primary);
+}
+
+.form textarea::placeholder {
+    color: #999999;
+}
+/*End: Custom textarea/scrollbar styles*/
+
+/*START: 404 page styles*/
+.notFound {
+    background-color: var(--secondary);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
+    padding: 1em 0.5em;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 1em;
+}
+
+.notFound a {
+    color: var(--link);
+}
+
+.notFound a:hover {
+    color: var(--linkHover);
+}
+/*END: 404 page styles*/
+
+/*START: Modifies webpage to fit more content and fix graphical errors*/
+@media (max-width: 1045px) {
+    
+    nav {
+        display: flex;
+        flex-flow: column;
+    }
+
+    nav ul {
+        flex-flow: column;
+    }
+
+    .body {
+        padding: 0.5em;
+    }
+
+    .background {
+        padding: 0.5em;
+    }
+    .nav {
+        padding: 0em;
+    }
+
+    .body h2 {
+        font-size: 1.4em;
+    }
+
+    /*START: Vertically aligns lists that only take up one line to appear more centered*/
+    nav li:nth-child(1) {
+        line-height: normal;
+    }
+
+    nav li:nth-child(3) {
+        line-height: normal;
+    }
+
+    nav li:nth-child(4) {
+        line-height: normal;
+    }
+
+    nav li:nth-child(5) {
+        line-height: normal;
+    }
+    /*END: Vertically aligns lists that only take up one line to appear more centered*/
+
+    .form label {
+        font-size: 1em;
+    }
+}
+/*END: Modifies webpage to fit more content and fix graphical errors*/
+
+/*START: Vertically aligns lists that only take up one line to appear more centered for mobile devices*/
+@media (max-width: 437px) {
+    nav li:nth-child(1) {
+        line-height: 2.3em;
+    }
+
+    nav li:nth-child(2) {
+        line-height: 2.3em;
+    }
+    
+    nav li:nth-child(3) {
+        line-height: 2.3em;
+    }
+    
+    nav li:nth-child(4) {
+        line-height: 2.3em;
+    }
+
+    nav li:nth-child(5) {
+        line-height: 2.3em;
+    }
+
+    .form legend {
+        border-color: var(--tertiary);
+        border-radius: 20px;
+        margin-right: 1em;
+        margin-left: 0.6em;
+        padding-left: 1em;
+        padding-right: 1em;
+        text-align: center;
+    }
+
+    .body h2 {
+        margin-right: auto;
+        margin-left:  auto;
+    }
+}
+
+
+/*END: Vertically aligns lists that only take up one line to appear more centered for mobile devices*/
+
+@media (max-width: 419px) {
+    nav li:nth-child(2) {
+        line-height: normal;
+    }
+}
+
+@media (min-width: 200px) {
+    #filter {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(11, 9, 71, 0.7);
+    }
+}
