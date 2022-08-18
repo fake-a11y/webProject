@@ -28,5 +28,5 @@ education.html
 Create partials to reduce redundant html
 Launch website onto web server
 Create Database schema and start database service
-Figure out how to use email API to get mail to work account
+Figure out how to use email API to get mail to work account.
 */
