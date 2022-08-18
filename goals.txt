@@ -17,7 +17,9 @@ Animations
 Custom progress bars
 
 Goals not started:
-Customizable color scheme through tinker.html, CSS, and JS
+Web page that will showcase my projects, 
+also contains features that allows me to upload, edit, delete, and download projects. (Create login page)
+
 JavaScript Code to process and send code to server (feedback.html)
 Node.js server saving data into database and sending data in a formatted email to me
 Security features (HTTPS, SALT+PEPPER, Encryption, etc.)
