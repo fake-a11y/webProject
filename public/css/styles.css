@@ -1,9 +1,10 @@
 /*
 Author: Matthew Lancaster
 File name: styles.css
-Date Last Updated: 8/4/2022
+Date Last Updated: 10/6/2022
 */
 
+/*Global variables*/
 :root {
     --primary: #0b0947;
     --secondary: #362c66;
